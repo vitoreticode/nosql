@@ -1,0 +1,11 @@
+# Install Hbase
+
+## Download Hbase
+wget http://mirror.nbtelecom.com.br/apache/hbase/2.2.5/hbase-2.2.5-bin.tar.gz
+
+## Uncompress the gz file
+tar -xvf hbase-2.2.5-bin.tar.gz
+
+## rename hbase folder
+mv hbase-2.2.5 hbase
+
