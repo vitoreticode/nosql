@@ -9,3 +9,25 @@ tar -xvf hbase-2.2.5-bin.tar.gz
 ## rename hbase folder
 mv hbase-2.2.5 hbase
 
+## Edit the hbase/conf/hbase-site.xml
+<property>
+   <name>hbase.cluster.distributed</name>
+   <value>false</value>
+</property>
+
+<property>
+   <name>hbase.rootdir</name>
+   <value>file:///home/ec2-user/hbase</value>
+</property>
+
+<property>
+  <name>hbase.zookeeper.property.dataDir</name>
+  <value>/home/ec2-user/zookeeper</value>
+  </property>
+</configuration>
+
+## Run the hbase service
+sudo ./hbase/bin/start-hbase.sh
+
+## Access Hbase
+hbase shell
