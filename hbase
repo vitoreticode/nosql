@@ -29,5 +29,12 @@ mv hbase-2.2.5 hbase
 ## Run the hbase service
 sudo ./hbase/bin/start-hbase.sh
 
-## Access Hbase
+## Access Hbase and do some basic tests
 hbase shell
+status
+list
+create 'Sales','Transactions'
+put 'Sales','1','Transactions:Date','20160501'
+put 'Sales','1','Transactions:Amount','3000'
+scan 'Sales'
+exit
